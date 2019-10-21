@@ -6,13 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# Jobposting.destroy.all
-# Employer.destroy.all
-# Applicants.destroy.all
-# Job
+# <<<<<<< milen
+
+# =======
+# # Jobposting.destroy.all
+# # Employer.destroy.all
+# # Applicants.destroy.all
+# # Job
 
 
-jobposting = Jobposting.create()
-jobapplication = Jobapplication.create()
-employer = Employer.create(name: "Linkedin", industry:"Tech", business_size:"corporate" , email: "linked.@linked.com")
-applicants = Applicants.create(full_name:"Milen Khanal", email: "milenkhanal@gmail.com")
+# jobposting = Jobposting.create()
+# jobapplication = Jobapplication.create()
+# employer = Employer.create(name: "Linkedin", industry:"Tech", business_size:"corporate" , email: "linked.@linked.com")
+# applicants = Applicants.create(full_name:"Milen Khanal", email: "milenkhanal@gmail.com")
+# >>>>>>> milen
