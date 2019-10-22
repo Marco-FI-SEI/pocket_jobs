@@ -1,5 +1,5 @@
 class EmployersController < ApplicationController
-<<<<<<< HEAD
+
     def index
         @employers = Employer.all
     end
@@ -40,9 +40,5 @@ class EmployersController < ApplicationController
     def employer_params
         params.require(:employer).permit(:name, :industry, :company_size, :email, :password_digest)
     end
-=======
-  def new
-    @applicant = Applicant.new
-  end
->>>>>>> general_pages
+
 end
