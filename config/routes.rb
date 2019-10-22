@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
   
 
   resources :applicant
@@ -10,4 +11,11 @@ Rails.application.routes.draw do
   post "/sessions", to: "session#create", as:"sessions"
   delete "/sessions", to: "session#destroy"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+=======
+
+  root to: 'pages#home'
+
+  resources :applicants
+  resources :employers
+>>>>>>> general_pages
 end

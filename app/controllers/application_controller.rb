@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+<<<<<<< HEAD
     helper_method :current_applicant
     
     def current_applicant
@@ -6,4 +7,9 @@ class ApplicationController < ActionController::Base
             Applicant.find(session[:applicant_id])
         end
     end
+=======
+    include DefaultPageContent
+
+
+>>>>>>> general_pages
 end

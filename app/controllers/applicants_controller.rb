@@ -1,4 +1,5 @@
 class ApplicantsController < ApplicationController
+<<<<<<< HEAD
 
     def index
         @applicants = Applicant.all
@@ -12,7 +13,7 @@ class ApplicantsController < ApplicationController
         @applicant = Applicant.create(applicant_params)
         @applicant.applicant = current_applicant
         @applicant.save
-        
+
     end
 
     def show
@@ -43,5 +44,4 @@ class ApplicantsController < ApplicationController
     def applicant_params
         params.require(:applicant).permit(:name, :email, :password_digest)
     end
-
 end
