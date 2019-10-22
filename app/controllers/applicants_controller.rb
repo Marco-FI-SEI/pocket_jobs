@@ -1,9 +1,5 @@
 class ApplicantsController < ApplicationController
 
-    def index
-        @applicants = Applicant.all
-    end
-
     def new
         @applicant = Applicant.new
     end
@@ -15,6 +11,7 @@ class ApplicantsController < ApplicationController
         @applicant = Applicant.create(applicant_params)
         @applicant.applicant = current_applicant
         @applicant.save
+
 
     end
 
