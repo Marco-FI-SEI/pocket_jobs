@@ -18,3 +18,15 @@ small arrow
 <br><br><br>
 <h5>Your next job is one click ahead!</h5>
 <br><br><br><br>
+<!--unlike button: when it is clicked, new and create 
+for job application should happen --> 
+<%= form_for @job_posting do |f| %>
+<%= f.hidden_field :interest, :value => false %>
+<%= f.submit %>
+<% end %>
+<!--like button: when it is clicked, new and create 
+for job application should happen -->
+<%= form_for @job_posting do |f| %>
+<%= f.hidden_field :interest, :value => true %>
+<% f.submit %>
+<% end %>
