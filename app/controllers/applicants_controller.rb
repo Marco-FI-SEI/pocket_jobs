@@ -11,6 +11,9 @@ class ApplicantsController < ApplicationController
     def login
     end
 
+    def signup
+    end
+
     def create
         @applicant = Applicant.create(applicant_params)
         if @applicant.valid?
