@@ -2,7 +2,8 @@
 <%=form_tag sessions_path do %>
 <%= label :applicant, :name%>
 <%= text_field :applicant, :name%>
-
+<%= label :applicant, :password%>
+<%= password_field :applicant, :password%>
 <%=submit_tag "Log In"%>
 
 <%end%>

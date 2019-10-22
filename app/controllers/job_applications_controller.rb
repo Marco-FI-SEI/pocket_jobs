@@ -1,4 +1,5 @@
 class JobApplicationsController < ApplicationController
+    
     def index
         @job_applications = JobApplication.all
     end
@@ -9,6 +10,7 @@ class JobApplicationsController < ApplicationController
 
     def create
         @job_application = JobApplication.create(job_application_params)
+        
     end
 
     def show
