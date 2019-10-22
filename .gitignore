@@ -26,4 +26,18 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+<<<<<<< HEAD
 node_modules
+=======
+
+node_modules
+
+
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+04f9ed48c91890b9a76fa0549bf0684d4e8be657
+>>>>>>> 386a6167d373400953888a2b2af9d8d429464734
