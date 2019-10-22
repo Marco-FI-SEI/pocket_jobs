@@ -10,6 +10,9 @@ class ApplicantsController < ApplicationController
 
     def create
         @applicant = Applicant.create(applicant_params)
+        @applicant.applicant = current_applicant
+        @applicant.save
+        
     end
 
     def show
