@@ -1,15 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>PocketJobs</title>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= @page_title  %></title>
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+  <% if current_applicant %>
+  <h4> You are logged in as<%=current_applicant.name%></h4>
+  <%= link_to "Log out", sessions_path, method::delete %>%
+  <%else%>
+    <%= link_to "Log in", new_session_path%>
+  <%end%>
     <%= yield %>
   </body>
 </html>
