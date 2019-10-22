@@ -15,13 +15,16 @@
   </head>
 
   <body>
-  <h3>flash[:notice]</h3>
+  <ul>
   <% if current_applicant %>
-  <h4> You are logged in as<%=current_applicant.name%></h4>
-  <%= link_to "Log out", sessions_path, method::delete %>%
-  <%else%>
-    <%= link_to "Log in", new_session_path%>
+  <h4> You are logged in as <%=current_applicant.name%></h4><br>
+
+     <p> <%=link_to "Log Out", sessions_path , method:
+      :delete%><br/></p>
+      <%else%>
+      <%=link_to "Log In", new_session_path%>
   <%end%> 
+  </ul>
     <%= yield %>
   </body>
 </html>
