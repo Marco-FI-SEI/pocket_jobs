@@ -8,10 +8,12 @@ class ApplicationController < ActionController::Base
         end
     end
 
+
     def authorize_user
         unless current_applicant
             flash[:notice] = "Sorry, you must be logged in to use this use this feature"
             redirect_to applicant_path
         end
     end
+
 end

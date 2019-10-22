@@ -1,4 +1,4 @@
 <h3>Job Postings List</h3>
-<% @job_postings.each do |job_posting| %>
-<%= link_to job_posting.title, job_posting_path(job_posting.id) %> <br>
+<% @job_postings.each do |job_posting| %> <br><br>
+<%= link_to job_posting.title, job_posting_path(job_posting.id) %> <br><br>
 <% end %>
