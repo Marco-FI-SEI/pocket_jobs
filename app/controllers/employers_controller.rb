@@ -1,9 +1,4 @@
 class EmployersController < ApplicationController
-
-    def index
-        @employers = Employer.all
-    end
-
     def new
         @employer = Employer.new
     end

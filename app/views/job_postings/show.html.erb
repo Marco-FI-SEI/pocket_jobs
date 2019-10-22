@@ -1,0 +1,20 @@
+<h5>Profile Image</h5>
+small arrow
+<br><br><br>
+<%= link_to "Dashboard", job_applications_path %>
+<br><br><br><br><br>
+------------------------------------------------------------------------------------------------
+<h5><%= @job_posting.title %></h5>
+<br><br>
+<h6>Employer</h6><%= @job_posting.employer %>
+<br><br>
+<h6>Salary:</h6>£<%= @job_posting.salary %>
+<br><br>
+<h6>Industry:</h6><%= @job_posting.employer.industry %>
+<br><br>
+<h6>Job Description:</h6><%= @job_posting.description %>
+<br><br>
+<h6>Requirements:</h6><%= @job_posting.requirement %>
+<br><br><br>
+<h5>Your next job is one click ahead!</h5>
+<br><br><br><br>
