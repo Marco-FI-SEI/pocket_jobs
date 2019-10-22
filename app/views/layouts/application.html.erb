@@ -18,7 +18,8 @@
   <h3><%= flash[:notice] %></h3>
   <% if current_applicant %>
   <h4> You are logged in as<%=current_applicant.name%></h4>
-  <%= link_to "Log out", sessions_path, method::delete %>%
+  <%= link_to "Log out", sessions_path, method:
+  :delete%>
   <%else%>
     <%= link_to "Log in", new_session_path%>
   <%end%>
