@@ -1,17 +1,17 @@
 class SessionsController < ApplicationController
 
-    def new 
+    def new
 
     end
 
-    def create 
-    
+    def create
+
     @applicant = Applicant.find_by(name: params[:applicant][:name])
-    
-    if @applicant && @applicant.authenticate(params[:user][:password])
+
+    if @applicant && @applicant.authenticate(params[:user][:password_digest])
         session[:applicant_id] = @applicant.id
         redirect_to applicant_path
-    else 
+    else
     flash[:notice] = "Sorry, we can't find a user with that username and password"
      redirect_to new_session_path
 
@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
 
     end
 
-    def destroy 
+    def destroy
         session.destroy
 
         redirect_to new_session_path
