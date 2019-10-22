@@ -1,9 +1,5 @@
 class ApplicantsController < ApplicationController
 
-    def index
-        @applicants = Applicant.all
-    end
-
     def new
         @applicant = Applicant.new
     end
