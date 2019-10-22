@@ -1,5 +1,4 @@
 class ApplicantsController < ApplicationController
-<<<<<<< HEAD
 
     def index
         @applicants = Applicant.all
@@ -7,6 +6,9 @@ class ApplicantsController < ApplicationController
 
     def new
         @applicant = Applicant.new
+    end
+
+    def login
     end
 
     def create

@@ -12,7 +12,7 @@
 # Job
 
 
-jobposting = Jobposting.create()
-jobapplication = Jobapplication.create()
-employer = Employer.create(name: "Linkedin", industry:"Tech", business_size:"corporate" , email: "linked.@linked.com")
-applicants = Applicants.create(full_name:"Milen Khanal", email: "milenkhanal@gmail.com")
+# jobposting = Jobposting.create()
+# jobapplication = Jobapplication.create()
+# employer = Employer.create(name: "Linkedin", industry:"Tech", business_size:"corporate" , email: "linked.@linked.com")
+# applicants = Applicants.create(full_name:"Milen Khanal", email: "milenkhanal@gmail.com")
