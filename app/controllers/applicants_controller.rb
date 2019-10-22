@@ -1,4 +1,8 @@
 class ApplicantsController < ApplicationController
+    before_action :authorize_user, except: [:index, :show]
+    def index
+        @applicants = Applicant.all
+    end
 
     def new
         @applicant = Applicant.new
@@ -6,10 +10,10 @@ class ApplicantsController < ApplicationController
 
     def create
         @applicant = Applicant.create(applicant_params)
-        @applicant.applicant = current_applicant
-        @applicant.save
-
-
+        if @applicant.valid?
+            session[:application_id] = @application.id
+            redirect_to application_path
+        end
     end
 
     def show
