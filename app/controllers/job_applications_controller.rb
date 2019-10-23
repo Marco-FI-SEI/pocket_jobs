@@ -14,7 +14,7 @@ class JobApplicationsController < ApplicationController
         @job_application = JobApplication.create(applicant_params)
         
         if @job_application.valid? 
-            @job_application.interest = true
+          
          redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
         else 
             redirect_to request.referrer
@@ -48,6 +48,6 @@ class JobApplicationsController < ApplicationController
     private
 
     def applicant_params
-        params.require(:job_application).permit(:job_posting_id, :applicant_id)
+        params.require(:job_application).permit(:job_posting_id, :applicant_id, :interest)
     end
 end

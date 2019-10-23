@@ -19,4 +19,6 @@ small arrow
 <h6>Requirements:</h6><%= @job_posting.requirement %>
 <br><br><br><br>
 
-<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id}), method: "POST", data: "Thank you"%>
+<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>
+
+<%=link_to "Reject", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => false}), method: "POST"%>
