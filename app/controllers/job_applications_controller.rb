@@ -11,10 +11,15 @@ class JobApplicationsController < ApplicationController
 
     def create
 
-        @job_application = JobApplication.create(job_application_params)
+        @job_application = JobApplication.create(applicant_params)
         
-        @job_application.applicant = current_applicant
-        #the point of this code above is assiging current applicant to the job application applicant.
+        if @job_application.valid? 
+            @job_application.interest = true
+         redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
+        else 
+            redirect_to request.referrer
+        end
+
     end
 
     def show
