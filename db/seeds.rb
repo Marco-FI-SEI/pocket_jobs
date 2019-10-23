@@ -62,7 +62,7 @@ work_times: 'Part Time',
 employer_id: employer2, 
 salary: 20000, 
 industry: Employer.second.industry)
-=======
+
 JobPosting.create(closing_date: Date.new, location: 'London', title: 'Junior Software Engineer',
 requirement: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
