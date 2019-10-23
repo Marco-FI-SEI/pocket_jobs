@@ -9,8 +9,11 @@ class JobApplicationsController < ApplicationController
     end
 
     def create
+
         @job_application = JobApplication.create(job_application_params)
         
+        @job_application.applicant = current_applicant
+        #the point of this code above is assiging current applicant to the job application applicant.
     end
 
     def show
