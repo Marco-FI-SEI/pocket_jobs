@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   include DefaultPageContent
- helper_method :current_applicant
-#  :authorize_user
+  helper_method :current_applicant, :authorize_user
 
     def current_applicant
         if session[:applicant_id]
