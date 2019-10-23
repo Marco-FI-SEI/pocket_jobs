@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_23_082313) do
+ActiveRecord::Schema.define(version: 2019_10_23_114223) do
 
   create_table "applicants", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_10_23_082313) do
     t.integer "employer_id"
     t.integer "salary"
     t.string "industry"
+    t.boolean "acknowledged?"
   end
 
   create_table "likes", force: :cascade do |t|
