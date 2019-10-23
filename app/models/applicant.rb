@@ -5,4 +5,5 @@ class Applicant < ApplicationRecord
 
     validates :password, confirmation: true
     validates :password_confirmation, presence: true
+    has_many :likes, dependent: :destroy
 end

@@ -18,15 +18,11 @@ small arrow
 <br><br><br>
 <h5>Your next job is one click ahead!</h5>
 <br><br><br><br>
-<!--unlike button: when it is clicked, new and create 
-for job application should happen --> 
-<%= form_for @job_posting do |f| %>
-<%= f.hidden_field :interest, :value => false %>
-<%= f.submit %>
-<% end %>
-<!--like button: when it is clicked, new and create 
-for job application should happen -->
-<%= form_for @job_posting do |f| %>
-<%= f.hidden_field :interest, :value => true %>
-<% f.submit %>
+<%= button_to'√', job_posting_likes_path(@job_posting), method: :job_posting %>
+<p><%= @job_posting.likes.count %> <%= (@job_posting.likes.count) == 1 ? 'Like' : 'Likes' %></p>
+<% pre_like = @job_posting.likes.find { |like| like.applicant_id == current_applicant.id} %>
+<% if pre_like %>
+    <%= button_to 'Unlike', job_posting_like_path(@job_posting, pre_like), method: :delete %>
+<% else %>
+    <%= button_to '√', job_posting_likes_path(@job_posting), method: :job_posting %>
 <% end %>

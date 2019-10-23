@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_22_133710) do
+ActiveRecord::Schema.define(version: 2019_10_23_082313) do
 
   create_table "applicants", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -52,4 +52,15 @@ ActiveRecord::Schema.define(version: 2019_10_22_133710) do
     t.string "industry"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "job_posting_id", null: false
+    t.integer "applicant_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["applicant_id"], name: "index_likes_on_applicant_id"
+    t.index ["job_posting_id"], name: "index_likes_on_job_posting_id"
+  end
+
+  add_foreign_key "likes", "applicants"
+  add_foreign_key "likes", "job_postings"
 end
