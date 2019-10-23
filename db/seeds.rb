@@ -47,6 +47,7 @@ every customer is blown away each time they visit.",
   employer_id: employer1_id,
   salary: 70000,
   industry: employer1.industry,
+  acknowledged?: false,
 )
 job_posting1.save(validate: false)
 
@@ -68,12 +69,13 @@ and digital innovation and are up for exciting challenges, this is just the job 
   employer_id: employer2_id,
   salary: 20000,
   industry: employer2.industry,
+  acknowledged?: false,
 )
 
 job_posting2.save(validate: false)
 
 job_posting3 = JobPosting.new(closing_date: Date.new, location: "London", title: "Junior Software Engineer",
-                                  requirement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              requirement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
 nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
@@ -81,8 +83,11 @@ officia deserunt mollit anim id est laborum.", description: "Lorem ipsum dolor s
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Full Time", employer_id: employer1_id,
-                                  salary: 70000, industry: employer1.industry)
+sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Full Time",
+                              employer_id: employer1_id,
+                              salary: 70000,
+                              industry: employer1.industry,
+                              acknowledged?: false)
 
 job_posting3.save(validate: false)
 
@@ -94,8 +99,11 @@ officia deserunt mollit anim id est laborum.", description: "Lorem ipsum dolor s
 elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
 in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Part Time", employer_id: employer2_id,
-                                  salary: 20000, industry: employer2.industry)
+sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Part Time",
+                              employer_id: employer2_id,
+                              salary: 20000,
+                              industry: employer2.industry,
+                              acknowledged?: false)
 
 job_posting4.save(validate: false)
 
