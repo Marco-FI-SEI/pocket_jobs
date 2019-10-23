@@ -1,6 +1,6 @@
 class Employer < ApplicationRecord
     has_many :job_postings
 
-    validates :password, confirmation: true
-    validates :password_confirmation, presence: true
+    validates :password_digest, confirmation: true
+    validates :password_digest_confirmation, presence: true
 end
