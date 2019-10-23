@@ -18,7 +18,7 @@ class ApplicantsController < ApplicationController
         @applicant = Applicant.create(applicant_params)
         if @applicant.valid?
             session[:applicant_id] = @applicant.id
-            redirect_to applicant_path
+            redirect_to applicant_path(@applicant)
         end
     end
 
