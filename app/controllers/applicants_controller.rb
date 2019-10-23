@@ -50,6 +50,6 @@ class ApplicantsController < ApplicationController
     private
 
     def applicant_params
-        params.require(:applicant).permit(:name, :email, :password_digest)
+        params.require(:applicant).permit(:name, :email, :password)
     end
 end

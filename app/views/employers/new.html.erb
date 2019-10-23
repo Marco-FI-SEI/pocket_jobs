@@ -2,6 +2,7 @@
 
 <h1 class="page-header">Sign up to get access to the best talent pool on the web!</h1>
 
+<div class="signup-form">
 <%= form_for @employer do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, class: "form-control" %>
@@ -11,12 +12,13 @@
   <%= f.text_field :company_size, class: "form-control" %>
   <%= f.label :email %>
   <%= f.text_field :email, class: "form-control" %>
-  <%= f.label :password_digest %>
-  <%= f.password_field :password_digest, class: "form-control" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
   <%= f.label :password_confirmation %>
   <%= f.password_field :password_confirmation, class: "form-control" %>
   <%= f.submit %>
 <% end %>
+</div>
 
 <%# <form class="signup-form">
   <div class="form-row">
@@ -28,7 +30,7 @@
       <label for="employer-signup-last-name">Last Name</label>
       <input type="text" class="form-control" id="employer-signup-last-name">
     </div>
-    <div class="form-group col-md-6">
+    <div class="form-group col-md-6">r
       <label for="employer-signup-email">Email</label>
       <input type="text" class="form-control" id="employer-signup-email">
     </div>
