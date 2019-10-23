@@ -8,7 +8,6 @@ class EmployersController < ApplicationController
   end
 
   def login
-    @employer
   end
 
   def signup

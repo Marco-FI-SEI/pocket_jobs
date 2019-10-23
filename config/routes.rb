@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   post "/sessions", to: "sessions#create", as: "sessions"
   delete "/sessions", to: "sessions#destroy"
 
-  get "employer_signup", to: "employers#login"
-  get "applicant_signup", to: "applicants#login"
+  get "employer_signup", to: "employers#new"
+  get "applicant_signup", to: "applicants#new"
 
   root to: "pages#home"
 end

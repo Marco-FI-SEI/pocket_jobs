@@ -1,5 +1,5 @@
 class ApplicantsController < ApplicationController
-    before_action :authorize_user, except: [:index, :show]
+    # before_action :authorize_user, except: [:index, :show]
     def index
         @applicants = Applicant.all
     end
@@ -33,7 +33,7 @@ class ApplicantsController < ApplicationController
     def update
         @applicant = Applicant.find(params[:id])
         if @applicant.update(applicant_params)
-            redirect_to applicants_path
+            redirect_to applicant_path
         else
             render :edit
         end
