@@ -113,7 +113,7 @@ job_posting2_id = job_posting2.id
 job_application1 = JobApplication.new(job_posting_id: job_posting1_id, applicant_id: applicant1_id, interest: true)
 job_application1.save
 
-job_application2 = JobApplication.new(job_posting_id: job_posting2_id, applicant_id: applicant2_id, interest: false)
+job_application2 = JobApplication.new(job_posting_id: job_posting2_id, applicant_id: applicant2_id, interest: true)
 job_application2.save
 
 job_application1_id = job_application1.id

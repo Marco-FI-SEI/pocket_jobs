@@ -16,4 +16,10 @@ class Applicant < ApplicationRecord
         g.map{|job_application|job_application.job_posting }
     end
 
+
+    def random_unacknowledged_jobs
+        d = self.job_postings.select{|job_posting|job_posting.acknowledged? == false}
+        d.sample
+        
+    end
 end

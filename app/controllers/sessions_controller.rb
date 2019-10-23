@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
 
     # end
     session[:applicant_id] = @applicant.id
-    redirect_to applicant_path(@applicant)
+    redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
 
     end
 

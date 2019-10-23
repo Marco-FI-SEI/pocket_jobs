@@ -1,1 +1,8 @@
-<%= link_to "Job Posting" , job_postings_path %>
+<h3> Job Posting </h3><br><br>
+
+<%@applicant.interested_jobs.each do|job_posting|%>
+<%=link_to job_posting.title, job_posting_path(job_posting.id)%>
+
+
+
+<%end%>

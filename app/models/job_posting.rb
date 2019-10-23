@@ -4,5 +4,6 @@ class JobPosting < ApplicationRecord
     has_many :applicants, through: :job_applications 
     has_many :likes, dependent: :destroy
 
+    
 
 end
