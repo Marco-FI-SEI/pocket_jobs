@@ -4,20 +4,20 @@ Employer.destroy_all
 JobApplication.destroy_all
 JobPosting.destroy_all
 
-applicant1 = Applicant.new(name: "Jeremy", email: "jeremy.amram@gmail.com", password_digest: "password1")
-applicant1.save(validate: false)
+applicant1 = Applicant.new(name: "Jeremy", email: "jeremy.amram@gmail.com", password: "password1", password_confirmation: "password1")
+applicant1.save
 
-applicant2 = Applicant.new(name: "Milen", email: "milen.bitch@gmail.com", password_digest: "password2")
-applicant2.save(validate: false)
+applicant2 = Applicant.new(name: "Milen", email: "milen.bitch@gmail.com", password: "password1", password_confirmation: "password1")
+applicant2.save
 
 applicant1_id = applicant1.id
 applicant2_id = applicant2.id
 
-employer1 = Employer.new(name: "Mondelez", industry: "Consumer Goods", company_size: "Corporate", email: "recruiting@mondelez.com", password_digest: "password3")
-employer1.save(validate: false)
+employer1 = Employer.new(name: "Mondelez", industry: "Consumer Goods", company_size: "Corporate", email: "recruiting@mondelez.com", password: "password1", password_confirmation: "password1")
+employer1.save
 
-employer2 = Employer.new(name: "Pfizer", industry: "Pharmaceutical", company_size: "Corporate", email: "recruiting@pfizer.com", password_digest: "password4")
-employer2.save(validate: false)
+employer2 = Employer.new(name: "Pfizer", industry: "Pharmaceutical", company_size: "Corporate", email: "recruiting@pfizer.com", password: "password1", password_confirmation: "password1")
+employer2.save
 
 employer1_id = employer1.id
 employer2_id = employer2.id
@@ -49,7 +49,7 @@ every customer is blown away each time they visit.",
   industry: employer1.industry,
   acknowledged?: false,
 )
-job_posting1.save(validate: false)
+job_posting1.save
 
 job_posting2 = JobPosting.new(
   closing_date: Date.new,
@@ -72,7 +72,7 @@ and digital innovation and are up for exciting challenges, this is just the job 
   acknowledged?: false,
 )
 
-job_posting2.save(validate: false)
+job_posting2.save
 
 job_posting3 = JobPosting.new(closing_date: Date.new, location: "London", title: "Junior Software Engineer",
                               requirement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -89,7 +89,7 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Fu
                               industry: employer1.industry,
                               acknowledged?: false)
 
-job_posting3.save(validate: false)
+job_posting3.save
 
 job_posting4 = JobPosting.new(closing_date: Date.new, location: "Manchester", title: "Tester", requirement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
 ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -105,16 +105,16 @@ sunt in culpa qui officia deserunt mollit anim id est laborum.", work_times: "Pa
                               industry: employer2.industry,
                               acknowledged?: false)
 
-job_posting4.save(validate: false)
+job_posting4.save
 
 job_posting1_id = job_posting1.id
 job_posting2_id = job_posting2.id
 
 job_application1 = JobApplication.new(job_posting_id: job_posting1_id, applicant_id: applicant1_id, interest: true)
-job_application1.save(validate: false)
+job_application1.save
 
 job_application2 = JobApplication.new(job_posting_id: job_posting2_id, applicant_id: applicant2_id, interest: false)
-job_application2.save(validate: false)
+job_application2.save
 
 job_application1_id = job_application1.id
 job_application2_id = job_application2.id
