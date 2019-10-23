@@ -5,6 +5,7 @@ class EmployersController < ApplicationController
 
   def create
     @employer = Employer.create(employer_params)
+    redirect_to employer_path
   end
 
   def login
@@ -40,6 +41,6 @@ class EmployersController < ApplicationController
   private
 
   def employer_params
-    params.require(:employer).permit(:name, :industry, :company_size, :email, :password)
+    params.require(:employer).permit!
   end
 end

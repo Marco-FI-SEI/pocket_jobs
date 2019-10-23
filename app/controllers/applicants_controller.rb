@@ -17,8 +17,8 @@ class ApplicantsController < ApplicationController
     def create
         @applicant = Applicant.create(applicant_params)
         if @applicant.valid?
-            session[:application_id] = @application.id
-            redirect_to application_path
+            session[:applicant_id] = @applicant.id
+            redirect_to applicant_path
         end
     end
 
@@ -48,6 +48,6 @@ class ApplicantsController < ApplicationController
     private
 
     def applicant_params
-        params.require(:applicant).permit(:name, :email, :password)
+        params.require(:applicant).permit(:name, :email, :password, :password_confirmation)
     end
 end
