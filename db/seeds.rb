@@ -53,6 +53,18 @@ Prior experience with documenting Client requirements
 Experience with enterprise integration tools, and extract, transformation and load (ETL) tools
 Growth mindset
 More than 1+ Salesforce certifications
+Minimum 1 year experience with Salesforce implementations', 
+description: 'The soul mission of my client is to simplify and improve their business processes effectively. 
+Nowadays they are focusing aggressively on business growth and improving their services, so they seek to hire 
+a Salesforce Consultant who has excellent organisational skills and negotiation skills. If you breathe technological 
+and digital innovation and are up for exciting challenges, this is just the job for you.', 
+work_times: 'Part Time', 
+employer_id: employer2, 
+salary: 20000, 
+industry: Employer.second.industry)
+
+JobPosting.create(closing_date: Date.new, location: 'London', title: 'Junior Software Engineer',
+
 Minimum 1 year experience with Salesforce implementations',
 description: 'The soul mission of my client is to simplify and improve their business processes effectively.
 Nowadays they are focusing aggressively on business growth and improving their services, so they seek to hire
