@@ -16,6 +16,7 @@ class ApplicantsController < ApplicationController
 
     def create
         @applicant = Applicant.create(applicant_params)
+    
         if @applicant.valid?
             session[:application_id] = @application.id
             redirect_to application_path
