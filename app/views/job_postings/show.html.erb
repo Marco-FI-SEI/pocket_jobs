@@ -1,7 +1,7 @@
 <h5>Your next job is one click ahead!</h5>
 <br><br>
 <h5>Profile Image</h5>
-small arrow
+
 <br><br><br>
 <%= link_to "Dashboard", job_applications_path %>
 <br><br><br><br><br>
@@ -19,6 +19,6 @@ small arrow
 <h6>Requirements:</h6><%= @job_posting.requirement %>
 <br><br><br><br>
 
-<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>
+<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>                                                          
+<%=link_to "Not Interested", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => false}), method: "POST"%>
 
-<%=link_to "Reject", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => false}), method: "POST"%>

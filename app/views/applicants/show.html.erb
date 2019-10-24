@@ -1,8 +1,9 @@
-<h3> Job Posting </h3><br><br>
-
-<%@applicant.interested_jobs.each do|job_posting|%>
-<%=link_to job_posting.title, job_posting_path(job_posting.id)%>
+<h3>  </h3><br><br>
 
 
-
-<%end%>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Upload CV</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+</form>
