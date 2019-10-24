@@ -10,38 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_24_103811) do
+ActiveRecord::Schema.define(version: 2019_10_21_083246) do
 
   create_table "applicants", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "email"
     t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "employers", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.string "name"
     t.string "industry"
     t.string "company_size"
-    t.string "password_digest"
     t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "job_applications", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
     t.integer "job_posting_id"
     t.integer "applicant_id"
+    t.boolean "job_application"
     t.boolean "interest"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "job_postings", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.date "closing_date"
+    t.string "closing_date"
     t.string "location"
     t.string "title"
     t.string "requirement"
@@ -51,6 +50,8 @@ ActiveRecord::Schema.define(version: 2019_10_24_103811) do
     t.integer "salary"
     t.string "industry"
     t.boolean "acknowledged?"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
 end

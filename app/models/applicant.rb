@@ -19,7 +19,9 @@ class Applicant < ApplicationRecord
 
     def random_unacknowledged_jobs
         d = self.job_postings.select{|job_posting|job_posting.acknowledged? == false}
+
         d.sample
-        
     end
+
+    
 end
