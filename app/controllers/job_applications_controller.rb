@@ -1,7 +1,8 @@
 class JobApplicationsController < ApplicationController
     
     def index
-        @job_applications = JobApplication.all
+        @job_applications = current_applicant.job_applications
+        
     
     end
 
@@ -12,7 +13,7 @@ class JobApplicationsController < ApplicationController
     def create
 
         @job_application = JobApplication.create(applicant_params)
-        
+       
         if @job_application.valid? 
           
          redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
