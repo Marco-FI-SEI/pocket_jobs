@@ -1,13 +1,4 @@
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="background">
-  <header class="masthead mb-auto">
-    <div class="inner">
-      <nav class="nav nav-masthead justify-content-center">
-        <%= link_to "Sign Up", applicant_signup_path, class: "nav-link" %>
-        <%= link_to "Log in", applicant_signup_path, class: "nav-link" %>
-      </nav>
-    </div>
-  </header>
-
   <main role="main" class="inner cover text-center">
       <h1 class="cover-heading">Pocket Jobs</h1>
       <p class="lead">Your next dream job is within reach...in fact it's waiting in your pocket.</p>
@@ -15,11 +6,8 @@
       <%= render 'forms/login' %>
 
   </main>
-
-  <footer class="home-footer mt-auto text-center">
-    <div class="inner">
-      <p></p>
-    </div>
-  </footer>
 </div>
-</html>
+
+
+<%= link_to "Sign Up", applicant_signup_path, class: "nav-link" %>
+<%= link_to "Log in", applicant_signup_path, class: "nav-link" %>
