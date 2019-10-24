@@ -1,9 +1,12 @@
-<h3>  </h3><br><br>
 
+<h6>Welcome to your profile!</h6><br>
 
+<h4><%=current_applicant.name%></h4> <br>
 <form>
   <div class="form-group">
     <label for="exampleFormControlFile1">Upload CV</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+    <input type="file" class="form-control-file" id="exampleFormControlFile1"><br><br>
+    <%=link_to "Current Jobs Available", job_postings_path%><br><br>
+    <%= link_to "Dashboard", job_applications_path %>
   </div>
 </form>
