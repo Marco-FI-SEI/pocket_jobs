@@ -1,12 +1,14 @@
+<h5>Your next job is one click ahead!</h5>
+<br><br>
 <h5>Profile Image</h5>
-small arrow
+
 <br><br><br>
 <%= link_to "Dashboard", job_applications_path %>
 <br><br><br><br><br>
 ------------------------------------------------------------------------------------------------
 <h5><%= @job_posting.title %></h5>
 <br><br>
-<h6>Employer</h6><%= @job_posting.employer %>
+<h6>Employer</h6><%= @job_posting.employer.name %>
 <br><br>
 <h6>Salary:</h6>£<%= @job_posting.salary %>
 <br><br>
@@ -15,14 +17,8 @@ small arrow
 <h6>Job Description:</h6><%= @job_posting.description %>
 <br><br>
 <h6>Requirements:</h6><%= @job_posting.requirement %>
-<br><br><br>
-<h5>Your next job is one click ahead!</h5>
 <br><br><br><br>
-<%= button_to'√', job_posting_likes_path(@job_posting), method: :job_posting %>
-<p><%= @job_posting.likes.count %> <%= (@job_posting.likes.count) == 1 ? 'Like' : 'Likes' %></p>
-<% pre_like = @job_posting.likes.find { |like| like.applicant_id == current_applicant.id} %>
-<% if pre_like %>
-    <%= button_to 'Unlike', job_posting_like_path(@job_posting, pre_like), method: :delete %>
-<% else %>
-    <%= button_to '√', job_posting_likes_path(@job_posting), method: :job_posting %>
-<% end %>
+
+<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>                                                          
+<%=link_to "Not Interested", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => false}), method: "POST"%>
+

@@ -1,14 +1,8 @@
-<h3>Job Application's</h3>
-<% @job_applications.each do |job_application| %>
-<%= job_application.employer %>
-<% end %>
-
-<h5>Liked Jobs</h5>
+<h3>Job Application's</h3> 
+<h5>Applied Jobs</h5>
+ <%= @job%>
 <br>
-arrow
-<br>
-<br>
-list of all job applications where job_posting's are presence: false
+list of all job applications of a single applicant, where job_posting's presence: false
 
 
 

@@ -2,6 +2,7 @@ class JobApplicationsController < ApplicationController
     
     def index
         @job_applications = JobApplication.all
+    
     end
 
     def new
@@ -10,10 +11,15 @@ class JobApplicationsController < ApplicationController
 
     def create
 
-        @job_application = JobApplication.create(job_application_params)
+        @job_application = JobApplication.create(applicant_params)
         
-        @job_application.applicant = current_applicant
-        #the point of this code above is assiging current applicant to the job application applicant.
+        if @job_application.valid? 
+          
+         redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
+        else 
+            redirect_to request.referrer
+        end
+
     end
 
     def show
@@ -42,6 +48,6 @@ class JobApplicationsController < ApplicationController
     private
 
     def applicant_params
-        params.require(:job_application).permit(:job_posting_id, :applicant_id)
+        params.require(:job_application).permit(:job_posting_id, :applicant_id, :interest)
     end
 end
