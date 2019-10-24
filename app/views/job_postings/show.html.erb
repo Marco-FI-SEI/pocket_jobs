@@ -1,11 +1,7 @@
-<h5>Your next job is one click ahead!</h5>
-<br><br>
-<h5>Profile Image</h5>
 
+<%= link_to "Back to Dashboard", job_applications_path %> <br>
+<%= link_to "Back to your Profile", applicant_path(current_applicant)%>
 <br><br><br>
-<%= link_to "Dashboard", job_applications_path %>
-<br><br><br><br><br>
-------------------------------------------------------------------------------------------------
 <h5><%= @job_posting.title %></h5>
 <br><br>
 <h6>Employer</h6><%= @job_posting.employer.name %>
@@ -17,8 +13,10 @@
 <h6>Job Description:</h6><%= @job_posting.description %>
 <br><br>
 <h6>Requirements:</h6><%= @job_posting.requirement %>
-<br><br><br><br>
+<br><br><br>
 
-<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>                                                          
-<%=link_to "Not Interested", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => false}), method: "POST"%>
+<h5>Your next job is one click ahead!</h5>
 
+<%=link_to "Apply", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST", data: {confirm: 'Are you sure?'}%> <br>                                                          
+<br><br>
+<%=link_to "Next Job Posting", job_applications_path(:job_application => {:job_posting_id => @job_posting.id, :applicant_id => current_applicant.id, :interest => true}), method: "POST"%> <br>                                                          
