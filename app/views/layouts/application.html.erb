@@ -1,7 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="h-100">
   <head>
-  <meta charset="utf-8">
+
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title><%= @page_title  %></title>
@@ -15,6 +16,18 @@
   </head>
 
   <body>
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Pocket Jobs</h5>
+  <a class="btn btn-outline-primary" href="#">Log in</a>
+</div>
+
     <%= yield %>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">A project by Marco, Jeremy, Milen.</span>
+      </div>
+    </footer>
   </body>
 </html>
