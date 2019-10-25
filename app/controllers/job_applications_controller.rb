@@ -40,11 +40,7 @@ class JobApplicationsController < ApplicationController
         end
     end
 
-    def destroy
-        @job_application = JobApplication.find(params[:id])
-        @job_application.destroy
-        redirect_to job_applications_path
-    end
+   
 
     private
 
