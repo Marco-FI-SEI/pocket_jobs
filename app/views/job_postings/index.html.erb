@@ -1,5 +1,6 @@
-<h3>Job Postings List</h3>
-<% @job_postings.each do |job_posting| %> <br><br>
-<%= link_to job_posting.title, job_posting_path(job_posting.id) %> <br><br>
+<%= link_to "Back", applicant_path(current_applicant)%> <br><br>
+<h3>All Job Postings</h3>
+<% @job_postings.each do |job_posting| %> <br>
+<%= link_to job_posting.title, job_posting_path(job_posting.id) %> <br>
 
 <% end %>

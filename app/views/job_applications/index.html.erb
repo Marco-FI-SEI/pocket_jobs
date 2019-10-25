@@ -1,20 +1,10 @@
-<h3>Job Application's</h3> 
-<h5>Applied Jobs</h5>
+<%= link_to "Back to Profile", applicant_path(current_applicant)%> <br><br>
+<h4>Welcome to your Dashboard</h4><br>
+<h5>Your Job Applications:</h5> <br>
 
  <%@job_applications.map do |job_application|%>
- <%=link_to job_application.applied_job_postings, job_posting_path(job_application.job_posting.id)%><br><br>
- 
+ <%=link_to job_application.applied_job_postings, job_posting_path(job_application.job_posting.id)%><br>
  <%end%>
 <br>
 
 
-list of all job applications of a single applicant, where job_posting's presence: false
-
-
-
-<h5>Matches</h5>
-<br>
-arrow
-<br>
-<br>
-list of all job applications where job_posting's are presence: true

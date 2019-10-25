@@ -32,12 +32,13 @@ class JobPostingsController < ApplicationController
     def destroy
         @job_posting = JobPosting.find(params[:id])
         @job_posting.destroy
-        redirect_to job_postings_path
+        redirect_to job_applications_path
     end
 
     private
 
     def applicant_params
-        params.require(:job_posting).permit(:closing_date, :location, :title, :requirement, :description, :work_times)
+        params.require(:job_posting).permit(:closing_date, :location, :title, :requirement, :description, :work_times, :employer_id, :salary, :industry, :acknowledged?)
     end
 end
+
