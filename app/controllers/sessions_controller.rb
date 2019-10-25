@@ -6,10 +6,10 @@ class SessionsController < ApplicationController
 
     def create
 
-    @applicant = Applicant.find_by(name: params[:applicant][:name])
+        @applicant = Applicant.find_by(name: params[:applicant][:name])
 
-    session[:applicant_id] = @applicant.id
-    redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
+        session[:applicant_id] = @applicant.id
+        redirect_to job_posting_path(current_applicant.random_unacknowledged_jobs)
 
     end
 

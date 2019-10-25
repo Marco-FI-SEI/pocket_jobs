@@ -1,9 +1,11 @@
-<h3></h3>
-<%=form_tag sessions_path do %>
-<%= label :applicant, :name%>
-<%= text_field :applicant, :name%>
-<%= label :applicant, :password%>
-<%= password_field :applicant, :password%>
-<%=submit_tag "Log In"%>
+<div class="signup-container">
 
+<%=form_tag sessions_path, class: "signup-form" do %>
+    <%= label :applicant, :name%>
+    <%= text_field :applicant, :name%>
+    <%= label :applicant, :password%>
+    <%= password_field :applicant, :password%>
+    <%=submit_tag "Log In"%>
 <%end%>
+
+</div>

@@ -1,13 +1,40 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title><%= @page_title  %></title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
 <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" id="background">
-  <main role="main" class="inner cover text-center">
-      <h1 class="cover-heading">Pocket Jobs</h1>
-      <p class="lead">Your next dream job is within reach...in fact it's waiting in your pocket.</p>
+  <header class="masthead mb-auto">
+    <div class="inner">
+      <nav class="nav nav-masthead justify-content-center">
+        <%= link_to "Log in", new_session_path, class: "nav-link" %>
+        <%= link_to "Sign Up", applicant_signup_path, class: "nav-link" %>
+      </nav>
+    </div>
+  </header>
 
-      <%= render 'forms/login' %>
-
+  <main role="main" class="inner cover">
+    <h1 class="cover-heading">Pocket Jobs</h1>
+    <p class="lead">Your next dream job is within reach...in fact it's waiting in your pocket.</p>
   </main>
+
+  <footer class="mastfoot mt-auto">
+    <div class="inner">
+      <p>A project by Marco, Jeremy, Milen.</p>
+    </div>
+  </footer>
 </div>
-
-
-<%= link_to "Sign Up", applicant_signup_path, class: "nav-link" %>
-<%= link_to "Log in", applicant_signup_path, class: "nav-link" %>
+  </body>
+  </html>

@@ -1,12 +1,15 @@
 
-<h6>Welcome to your profile!</h6><br>
+<div class="signup-container">
 
-<h4><%=current_applicant.name%></h4> <br>
-<form>
+<form class="signup-form">
+<h6 class="profile_title">Welcome to your profile <%=@applicant.name%>!</h6><br>
+
   <div class="form-group">
-    <label for="exampleFormControlFile1">Upload CV</label>
+    <label for="exampleFormControlFile1"><strong>Upload CV</strong></label>
     <input type="file" class="form-control-file" id="exampleFormControlFile1"><br><br>
-    <%=link_to "Current Available Jobs", job_postings_path%><br><br>
-    <%= link_to "Dashboard", job_applications_path %>
+    <%= link_to "Current Available Jobs", job_postings_path, class: "profile_links"%><br><br>
+    <%= link_to "Dashboard", job_applications_path, class: "profile_links" %><br><br>
+    <%= link_to "Edit Profile", edit_applicant_path(@applicant), class: "profile_links" %>
   </div>
 </form>
+</div>

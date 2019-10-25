@@ -7,6 +7,7 @@ class JobPostingsController < ApplicationController
         @job_posting = JobPosting.new
     end
 
+
     def create
         @job_posting = JobPosting.create(job_posting_params)
     end

@@ -5,7 +5,6 @@ class Applicant < ApplicationRecord
 
     validates :password, confirmation: true
     validates :password_confirmation, presence: true
-    has_many :likes, dependent: :destroy
 
 
     #  Get all of an applicant's job applications
@@ -23,5 +22,5 @@ class Applicant < ApplicationRecord
         d.sample
     end
 
-    
+
 end

@@ -1,0 +1,17 @@
+<div class="signup-form">
+<%= form_for @employer do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :industry %>
+  <%= f.text_field :industry, class: "form-control" %>
+  <%= f.label :company_size %>
+  <%= f.text_field :company_size, class: "form-control" %>
+  <%= f.label :email %>
+  <%= f.text_field :email, class: "form-control" %>
+  <%= f.label :password %>
+  <%= f.password_field :password, class: "form-control" %>
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, class: "form-control" %>
+  <%= f.submit %>
+<% end %>
+</div>

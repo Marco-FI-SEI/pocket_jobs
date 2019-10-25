@@ -35,7 +35,7 @@ class ApplicantsController < ApplicationController
     def update
         @applicant = Applicant.find(params[:id])
         if @applicant.update(applicant_params)
-            redirect_to applicant_path
+            redirect_to applicant_path(@applicant)
         else
             render :edit
         end

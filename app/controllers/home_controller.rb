@@ -1,3 +1,2 @@
-class HomeController < ApplicationController
-
+class HomeController < ActionController::Base
 end
